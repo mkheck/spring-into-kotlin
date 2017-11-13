@@ -1,0 +1,25 @@
+= Springing into Kotlin
+
+== Maintainer
+
+* Mark Heckler
+* mailto:mark@thehecklers.org[mark@thehecklers.org]
+* https://twitter.com/MkHeck[@mkheck on Twitter]
+
+== Purpose
+
+This repo accompanies my session titled "Springing into Kotlin".
+
+== Notes
+
+NOTE: This project has _multiple branches_, check each out in succession to see the progression (changes *highlighted*):
+
+* Spring Boot 1.x + Java
+* Spring Boot *2.x* + Java
+* Spring Boot 2.x + *build file changes made to support Kotlin*
+* Spring Boot 2.x + *Kotlin data class as application's model*
+* Spring Boot 2.x + *Kotlin (all)*
+
+== Related presentation
+
+https://github.com/mkheck/something_something_replace_with_real_link[PDF of slides from accompanying presentation]
