@@ -14,7 +14,7 @@ public class SpringIntoKotlinApplication {
 	    return args -> {
             Arrays.asList("Mallard", "Long-tailed duck", "Northern Shoveler", "Gadwall")
                     .stream()
-                    .map(Duck::new)
+                    .map(type -> new Duck(null, type))
                     .forEach(duck -> {
                         duckRepository.save(duck);
                         System.out.println(duck);
