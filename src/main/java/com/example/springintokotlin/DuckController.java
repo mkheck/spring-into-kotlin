@@ -2,7 +2,7 @@ package com.example.springintokotlin;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/ducks")
@@ -19,8 +19,8 @@ public class DuckController {
     }
 
     @GetMapping("/{id}")
-    public Duck getDuckById(@PathVariable String id) {
-        return duckRepository.findOne(id);
+    public Optional<Duck> getDuckById(@PathVariable String id) {
+        return duckRepository.findById(id);
     }
 
     @GetMapping("/search")
