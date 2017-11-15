@@ -22,4 +22,4 @@ NOTE: This project has _multiple branches_, check each out in succession to see 
 
 == Related presentation
 
-https://speakerdeck.com/mkheck/springing-into-kotlin-how-to-make-the-magic-even-more-magical[Accompanying presentation]
+https://speakerdeck.com/mkheck/springing-into-kotlin-how-to-make-the-magic-even-more-magical[Springing Into Kotlin presentation]
