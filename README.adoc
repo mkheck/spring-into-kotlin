@@ -14,11 +14,11 @@ This repo accompanies my session titled "Springing into Kotlin".
 
 NOTE: This project has _multiple branches_, check each out in succession to see the progression (changes *highlighted*):
 
-* Spring Boot 1.x + Java
-* Spring Boot *2.x* + Java
-* Spring Boot 2.x + *build file changes made to support Kotlin*
-* Spring Boot 2.x + *Kotlin data class as application's model*
-* Spring Boot 2.x + *Kotlin (all)*
+* https://github.com/mkheck/spring-into-kotlin[Spring Boot 1.x + Java]
+* https://github.com/mkheck/spring-into-kotlin/tree/springboot2[Spring Boot *2.x* + Java]
+* https://github.com/mkheck/spring-into-kotlin/tree/kotlinbuild[Spring Boot 2.x + *build file changes made to support Kotlin*]
+* https://github.com/mkheck/spring-into-kotlin/tree/kotlinmodel[Spring Boot 2.x + *Kotlin data class as application's model*]
+* https://github.com/mkheck/spring-into-kotlin/tree/kotlinall[Spring Boot 2.x + *Kotlin (all)*]
 
 == Related presentation
 
