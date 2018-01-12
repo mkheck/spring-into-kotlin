@@ -15,10 +15,9 @@ public class SpringIntoKotlinApplication {
             Arrays.asList("Espresso Roast", "Sumatra", "Pike Place", "Seattle Blend", "Kaldi")
                     .stream()
                     .map(Coffee::new)
-                    .forEach(coffee -> {
-                        coffeeRepository.save(coffee);
-                        System.out.println(coffee);
-                    });
+                    .forEach(coffeeRepository::save);
+
+            coffeeRepository.findAll().forEach(System.out::println);
         };
     }
 
