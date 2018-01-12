@@ -9,16 +9,15 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class SpringIntoKotlinApplication {
-	@Bean
-    CommandLineRunner demoData(DuckRepository duckRepository) {
-	    return args -> {
-            Arrays.asList("Mallard", "Long-tailed duck", "Northern Shoveler", "Gadwall")
+    @Bean
+    CommandLineRunner demoData(CoffeeRepository coffeeRepository) {
+        return args -> {
+            Arrays.asList("Espresso Roast", "Sumatra", "Pike Place", "Seattle Blend", "Kaldi")
                     .stream()
-                    .map(type -> new Duck(null, type))
-                    .forEach(duck -> {
-                        duckRepository.save(duck);
-                        System.out.println(duck);
-                    });
+                    .map(type -> new Coffee(null, type))
+                    .forEach(coffeeRepository::save);
+
+            coffeeRepository.findAll().forEach(System.out::println);
         };
     }
 
