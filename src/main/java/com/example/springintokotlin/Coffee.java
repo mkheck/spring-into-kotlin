@@ -4,16 +4,16 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Duck {
+public class Coffee {
     @Id
     private String id;
     private String type;
     private String code;
 
-    public Duck() {
+    public Coffee() {
     }
 
-    public Duck(String type) {
+    public Coffee(String type) {
         this.type = type;
         this.code = type.toLowerCase().replace(" ", "-");
     }
@@ -47,11 +47,11 @@ public class Duck {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Duck duck = (Duck) o;
+        Coffee coffee = (Coffee) o;
 
-        if (!id.equals(duck.id)) return false;
-        if (!type.equals(duck.type)) return false;
-        return code.equals(duck.code);
+        if (!id.equals(coffee.id)) return false;
+        if (!type.equals(coffee.type)) return false;
+        return code.equals(coffee.code);
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Duck {
 
     @Override
     public String toString() {
-        return "Duck{" +
+        return "Coffee{" +
                 "id='" + id + '\'' +
                 ", type='" + type + '\'' +
                 ", code='" + code + '\'' +
