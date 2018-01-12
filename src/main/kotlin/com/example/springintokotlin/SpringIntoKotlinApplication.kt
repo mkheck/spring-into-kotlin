@@ -1,24 +1,20 @@
 package com.example.springintokotlin
 
 import org.springframework.boot.CommandLineRunner
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
 
-import java.util.Arrays
-
 @SpringBootApplication
 class SpringIntoKotlinApplication {
     @Bean
-    fun demoData(duckRepository: DuckRepository) = CommandLineRunner {
-        listOf("Mallard", "Long-tailed duck", "Northern Shoveler", "Gadwall")
+    fun demoData(coffeeRepository: CoffeeRepository) = CommandLineRunner {
+        listOf("Espresso Roast", "Sumatra", "Pike Place", "Seattle Blend", "Kaldi")
                 .stream()
-                .map { Duck(type = it) }
-                .forEach {
-                    duckRepository.save(it)
-                    println(it)
-                }
+                .map { Coffee(type = it) }
+                .forEach { coffeeRepository.save(it) }
+
+        coffeeRepository.findAll().forEach { println(it) }
     }
 }
 
