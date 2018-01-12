@@ -10,14 +10,14 @@ import java.util.Arrays;
 @SpringBootApplication
 public class SpringIntoKotlinApplication {
 	@Bean
-    CommandLineRunner demoData(DuckRepository duckRepository) {
+    CommandLineRunner demoData(CoffeeRepository coffeeRepository) {
 	    return args -> {
-            Arrays.asList("Mallard", "Long-tailed duck", "Northern Shoveler", "Gadwall")
+            Arrays.asList("Espresso Roast", "Sumatra", "Pike Place", "Seattle Blend", "Kaldi")
                     .stream()
-                    .map(Duck::new)
-                    .forEach(duck -> {
-                        duckRepository.save(duck);
-                        System.out.println(duck);
+                    .map(Coffee::new)
+                    .forEach(coffee -> {
+                        coffeeRepository.save(coffee);
+                        System.out.println(coffee);
                     });
         };
     }
