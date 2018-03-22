@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.*
 class CoffeeController(private val coffeeRepository: CoffeeRepository) {
 
     @GetMapping
-    fun allDucks() = coffeeRepository.findAll()
+    fun allCoffees() = coffeeRepository.findAll()
 
     @GetMapping("/{id}")
-    fun getDuckById(@PathVariable id: String) = coffeeRepository.findById(id)
+    fun getCoffeeById(@PathVariable id: String) =
+            coffeeRepository.findById(id)
 
     @GetMapping("/search")
-    fun getDuckByType(@RequestParam type: String?) = if (type == null) {
+    fun getCoffeeByType(@RequestParam type: String?) = if (type == null) {
         coffeeRepository.findAll().iterator().next()
     } else {
         coffeeRepository.findByType(type)
