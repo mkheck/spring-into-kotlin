@@ -11,12 +11,10 @@ class CoffeeController(private val coffeeRepository: CoffeeRepository) {
 
     @GetMapping("/{id}")
     fun getCoffeeById(@PathVariable id: String) =
-            coffeeRepository.findById(id)
+        coffeeRepository.findById(id)
 
     @GetMapping("/search")
-    fun getCoffeeByType(@RequestParam type: String?) = if (type == null) {
-        coffeeRepository.findAll().iterator().next()
-    } else {
-        coffeeRepository.findByType(type)
-    }
+    fun getCoffeeByType(@RequestParam type: String?) = type?.let {
+        coffeeRepository.findByType(it)
+    } ?: coffeeRepository.findAll().first()
 }

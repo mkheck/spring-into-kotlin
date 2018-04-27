@@ -5,6 +5,5 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
 data class Coffee(@Id val id: String? = null, val type: String = "Black Hole Coffee") {
-    val code
-        get() = type.toLowerCase().replace(" ", "-")
+    val code = type.toLowerCase().replace(" ", "-")
 }
