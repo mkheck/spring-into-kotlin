@@ -10,7 +10,6 @@ class SpringIntoKotlinApplication {
     @Bean
     fun demoData(coffeeRepository: CoffeeRepository) = CommandLineRunner {
         listOf("Espresso Roast", "Sumatra", "Pike Place", "Seattle Blend", "Kaldi")
-                .stream()
                 .map { Coffee(type = it) }
                 .forEach { coffeeRepository.save(it) }
 
